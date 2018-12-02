@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	<style>
+	@import url('https://fonts.googleapis.com/css?family=Song+Myung');
+	@FONT-FACE{
+	font-family: "휴먼엑스포", "한컴돋움", "SM견출고딕 Std Regular", "SM견출명조 Std Regular";
+	src: url('HMFMMUEX_0.ttf','HDOTUM_0.ttf','SMKGothicStd-Regular.otf','SMKMyungJoStd-Regular.otf');
+	}
+		body{background-color:blue; overflow-x:hidden;}	
+	#ziry{position: absolute; top:0; left:0; padding:20px; font-family: 'SM견출명조 Std Regular', serif; font-size: 100px;font-weight:700;line-height:120px; color:white}
+	#ziry2{width:1000px; height:auto;position: absolute; top: 270px; left:430px; padding:20px; font-family: 'SM견출명조 Std Regular', serif; font-size: 2em; font-weight:500; line-height:1.5em; background-color:red;}
+	#txt{width:420px;position:absolute; top:280px; left:10px; color:white; font-family: 'SM견출고딕 Std Regular', "한컴돋움"; font-size: 4em; line-height:1.7em;}
+		
+.center {width:600px;
+  position: absolute;
+  top:100px; bottom:0;
+  left:400px; right:0;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  opacity: 0.99;
+  font-family: 'SM견출명조 Std Regular', serif;
+  font-size: 50px;
+  text-align: center;}
+		
+		#word{position:absolute; top:73px;left:659px;}
+		#wordi{position:absolute; top:90px;left:600px;}
+		#wordo{position:absolute; top:10px;left:600px;}
+
+	</style>
+</head>
+
+<body>
+	<div id = "txt"></div>
+	<div id = "red"></div>
+	<div id="ziry"> 對공작원<br>교신법</div>
+	<div id="ziry2"> 1. 매 시 정각에 방송을 시작한다. 방송은 발신원에서 재생하는 임의의 음악이 재생된 이후 시작한다. <br>2. 해당 전문의 호수와 조수를 알린다.<br>(ex)1204호, 1204호, 전문 받으세요. 조수 12조, 조수 12조. 전문 부르겠습니다.)<br>3. 첫 번째 전문을 부른다. 보통 5자리이며 이 때 전문은 X백 X십 X + X십 X, 혹은 X십 X + X백 X십 X로 부른다.<br>4. 전문을 모두 부르면 재송신을 알리고 XXXX혹은 XXXXX의 형식으로 전문을 다시 부른다.<br>(ex)본문 다시 부르겠습니다. X만 X천 X백 X십 X) <br>5. 방송의 송신이 끝났음을 알린다. (ex)이상입니다. 감사합니다) </div>
+	
+	<div class = "center">
+  	<span class="header center cherry" id="word"></span>
+	</div>
+	
+	<div class = "center2">
+  	<span class="header center cherry2" id="wordi"></span>
+	</div>
+	
+	<div class = "center3">
+  	<span class="header center cherry3" id="wordo"></span>
+	</div>
+
+	
+	<script type="text/javascript">
+
+		var word = document.getElementById('word');
+		var colors = ['#000000'];
+		var letters = ['0','1','2','3','4','5','6','7','8','9']; 
+		var skip = 75;
+		var counter = 0;
+		var swap = function() {
+
+			if(counter++ == skip) {
+
+  	randWord = letters[Math.floor(Math.random()*10)]
+	+ letters[Math.floor(Math.random()*10)]
+	+ letters[Math.floor(Math.random()*10)]
+    + letters[Math.floor(Math.random()*10)]
+    + letters[Math.floor(Math.random()*10)];
+	
+   	var k = document.getElementsByClassName("cherry");
+   	for(var i=0; i < k.length; i++){
+     k[i].innerHTML = randWord;
+	   
+   }
+    counter = 0;
+	
+  }
+  window.requestAnimationFrame(swap);
+}
+swap();
+		
+		var wordi = document.getElementById('wordi');
+		var colorsi = ['#000000'];
+		var lettersi = ['0','1','2','3','4','5','6','7','8','9']; 
+		var skipi = 75;
+		var counteri = 0;
+		var swapi = function() {
+
+			if(counteri++ == skipi) {
+
+  	randWordi = lettersi[Math.floor(Math.random()*10)]
+	+ lettersi[Math.floor(Math.random()*10)]
+	+ lettersi[Math.floor(Math.random()*10)]
+    + lettersi[Math.floor(Math.random()*10)]
+    + lettersi[Math.floor(Math.random()*10)];
+	
+   	var l = document.getElementsByClassName("cherry2");
+   	for(var i=0; i < l.length; i++){
+     l[i].innerHTML = randWordi;
+	   
+   }
+    counteri = 0;
+	
+  }
+  window.requestAnimationFrame(swapi);
+}
+swapi();
+		
+		var wordo = document.getElementById('wordo');
+		var colorso = ['#000000'];
+		var letterso = ['0','1','2','3','4','5','6','7','8','9']; 
+		var skipo = 75;
+		var countero = 0;
+		var swapo = function() {
+
+			if(countero++ == skipo) {
+
+  	randWordo = letterso[Math.floor(Math.random()*10)]
+	+ letterso[Math.floor(Math.random()*10)]
+	+ letterso[Math.floor(Math.random()*10)]
+    + letterso[Math.floor(Math.random()*10)]
+    + letterso[Math.floor(Math.random()*10)];
+	
+   	var m = document.getElementsByClassName("cherry3");
+   	for(var i=0; i < m.length; i++){
+     m[i].innerHTML = randWordo;
+	   
+   }
+    countero = 0;
+	
+  }
+  window.requestAnimationFrame(swapo);
+}
+swapo();
+		
+		
+function random_hangul() {
+	return String.fromCharCode( 44031 + Math.ceil( 11172 * Math.random() ) );
+}
+
+for( var i=0; i<20; i++ ) {
+	document.getElementById("txt").innerHTML= "① "+random_hangul() + random_hangul() + random_hangul() + random_hangul() + random_hangul()+"② "+random_hangul() + random_hangul() + random_hangul() + random_hangul() + random_hangul()+"③ "+random_hangul() + random_hangul() + random_hangul() + random_hangul() + random_hangul()+"④ "+random_hangul() + random_hangul() + random_hangul() + random_hangul() + random_hangul()+"⑤ "+random_hangul() + random_hangul() + random_hangul() + random_hangul() + random_hangul();
+}
+	</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>무제 문서</title>
+	<style>
+	@import url('https://fonts.googleapis.com/css?family=Song+Myung');
+	@FONT-FACE{
+	font-family: "휴먼엑스포", "한컴돋움", "SM견출고딕 Std Regular", "SM견출명조 Std Regular";
+	src: url('HMFMMUEX_0.ttf','HDOTUM_0.ttf','SMKGothicStd-Regular.otf','SMKMyungJoStd-Regular.otf');
+	}
+		
+	#ziry{position: absolute; top:-30px; left:0; font-family: 'SM견출명조 Std Regular', 'Song Myung'; font-size: 100px;font-weight:700;}
+	#ziry2{width:500px; height:500px;position: absolute; top: 160px; left:0; font-family: 'SM견출명조 Std Regular', 'Song Myung'; font-size: 50px; font-weight:500; line-height:70px;}
+	#fampho{width:400px; position: absolute; top:165px; left:600px; line-height:22px;}
+	#chayel{width:60px; height:25px; position:absolute; top:235px; left:840px; background-color:black; z-index:9999}	
+	#chayel:hover {background-color: red;}	
+	#redd:hover{background-color: red;}
+	#txt{position:absolute; left:1050px; font-family: 'SM견출고딕 Std Regular', serif; font-size:25px;}	
+	#txt2{position:absolute; top: 47px; left:1050px; font-family: 'SM견출고딕 Std Regular', '한컴돋움'; font-size:25px; color:red}
+	#txt3{position:absolute; top: 85px; left:1050px; font-family: 'SM견출고딕 Std Regular', '한컴돋움'; font-size:25px; color:red}
+		
+.center {width:600px;
+  position: absolute;
+  top:300px; bottom:0;
+  left:10; right:0;
+	transform:rotate(135deg)
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  opacity: 0.99;
+  font-family: 'SM견출고딕 Std Regular', serif;
+  font-size: 200px;
+  text-align: center;
+}
+	
+		
+	html{font-family: 'SM견출고딕 Std Regular', serif;}
+		body{background-size: cover; background-attachment:fixed;}
+		section{background: none; padding:50px; background-size: cover;}
+		h1{text-align: center; position: relative; font-size: 1.5em; font-weight: 400;margin:0;padding:0;}
+		h2{text-align: center; position: relative; font-weight: 400; color:white; margin:0;padding:0;line-height: 1.3}
+		p{width:800px; margin:auto; line-height: 1.6; font-size:1.5em; padding: 50px;}
+		.black{background:black;color:white;}.white{background:white;}.trans{color:black;}
+		
+	</style>
+</head>
+
+<body onload="startTime()">
+	<div id="txt"></div>
+	<div id="txt2"></div>
+	<div id="txt3"></div>
+	<div id="chayel"></div>
+	<div id="fampho"><img src="img/3.jpg" style="width:400px;"><br>△ 화목한 가족 구성원. 모두들 환하게 웃고 있다.</div>
+	<div id="ziry"> 지령(指令) </div>
+	<div id="ziry2"> 비밀공작에서 흔히 사용하는 용어로 비밀리에 특정 대상자나 기관에게 특수한 행동이나 방침을 명령하는 것이다. </div>
+	
+	<div class = "center">
+  	<span class="header center cherry" id="word"></span>
+	</div>
+	
+	<section style="height:680px;">
+	</section>
+	<section class="trans" style="background:url(img/2.gif) fixed;">
+		<h2><br><br><br><br><a href="1-1.html"><mark>시작 전 주의사항</mark></a><br><br><br><br></h2>
+	</section>
+	<section class="trans" style="background:url(img/1.jpg) fixed">
+		<p><a href="1-2.html"><mark class="white">우리는 무슨 일을 합니까?</mark></a></p>
+	</section>
+	<section class="black">
+		<h2><a href = "1-3.html">對공작원 교신법</a></h2>
+	</section>
+	<section class="trans" style="background:url(img/2.gif) fixed;">
+		<p><a href="1-4.html"><mark class="white">절대로 선을 밟지 마십시요.<br>절대로 두 칸 이내에 상자를 두지 마십시요.<br>절대로 빨강색 손잡이를 당기지 마십시요.</mark></a></p>
+	</section>
+	<section class="trans" style="background:url(img/1.jpg) fixed">
+		<a href="1-5.html"><h2 id = "redd">이를 어겼을 경우에</h2></a>
+	</section>
+	<section class="trans" style="background:url(img/2.gif) fixed">
+		<br><br><a href="1-6.html"><h2>기록지</h2></a><br><br>
+	</section>
+	
+	<script type="text/javascript">
+		var retVal = prompt(" 축하드립니다! 당신은 오리의 백사장에 겸손하게 줄넘기하셨습니다! 지금 바로 성명과 연령을 입력해주십시요. ", "성명");
+		
+		document.getElementById('txt2').innerHTML="성명: "+retVal+" ";
+		
+		var retVat = prompt("", "연령");
+		document.getElementById('txt3').innerHTML="연령: "+retVat+" 세";
+		
+ 		alert(" 걌슑딒걎? " +  "" );
+
+		function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    "현재 시각은 " + h + ":" + m + ":" + s + " 초 입니다.";
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  
+    return i;
+}
+	</script>
+</body>
+</html>
